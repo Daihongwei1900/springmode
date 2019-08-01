@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--开启注解扫描=======================-->
+<!--需要配置context约束-->
+<!--    <context:component-scan base-package="com.imooc"/>-->
+
+    <context:annotation-config/>
+
+    <bean id="productService" class="com.imooc.second.demo3.ProductService">
+       <!-- <property name="productDao" ref="productDao"/>
+        <property name="categoryDao" ref="categoryDao"/>-->
+    </bean>
+
+    <bean id="productDao" class="com.imooc.second.demo3.ProductDao"/>
+
+    <bean id="categoryDao" class="com.imooc.second.demo3.CategoryDao"/>
+</beans>
